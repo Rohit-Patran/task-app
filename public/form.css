@@ -1,0 +1,46 @@
+form{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5vw;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    align-items: center;
+    padding: 2vw;
+    background-color: orange;
+}
+
+form textarea{
+    width: 50%;
+}
+
+form section{
+    display: flex;
+    justify-content: flex-start;
+    width: 50%;
+    column-gap: 2vw;
+}
+
+form section label{
+    font-size: 1.5vw;
+    color: white;
+}
+
+form section select{
+    width: 100%;
+    text-align: center;
+    font-size: 1.3vw;
+}
+
+form input[type="submit"]
+{
+    background-color: darkblue;
+    color: white;
+    margin: 1vw auto;
+    border: 0.5vw solid darkblue;
+    border-radius: 0.5vw;
+    cursor: pointer;
+    font-size: 1.2vw;
+    outline: none;
+}

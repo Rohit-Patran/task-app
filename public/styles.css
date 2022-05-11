@@ -1,0 +1,72 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: lightgray;
+    font-family: sans-serif;
+}
+nav{
+    padding: 2vw;
+    text-align: center;
+}
+nav a{
+    text-decoration: none;
+    font-size: 1vw;
+    background-color: dodgerblue;
+    color:white;
+    padding: 0.5vw 1vw;
+    border: 0.5vw solid dodgerblue;
+    border-radius: 0.5vw;
+    margin: 0 1.2vw;
+}
+
+.tasks{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tasks a{
+    background-color: green;
+    color: white;
+    text-decoration: none;
+    padding: 1vw 2vw;
+    margin: 0.5vw;
+    border-radius: 0.5vw;
+}
+
+#task-details{
+    background-color: orange;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5vw;
+    align-items: center;
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#buttons{
+    display: flex;
+    flex-direction: row;
+    column-gap: 1vw;
+}
+#buttons input[type="button"]
+{
+    background-color: darkblue;
+    color: white;
+    text-decoration: none;
+    margin: 1vw auto;
+    border: 0.5vw solid darkblue;
+    border-radius: 0.5vw;
+    cursor: pointer;
+    outline: none;
+}
+footer{
+    text-align: center;
+    position: absolute;
+    bottom: 1vh;
+    left: 50%;
+    transform: translateX(-50%);
+}

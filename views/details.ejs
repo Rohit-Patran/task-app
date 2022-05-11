@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./partials/header.ejs") %>
+<body>
+    <%- include("./partials/nav.ejs") %>
+    <div id="task-details">
+        <h2>TASK DETAILS</h2>
+        <% if(task) {%>
+            <p>Task description : <%= task.description %></p>
+            <p>Task completion : <%= task.completed %></p>
+        <% } %>
+        <div id="buttons">
+            <input type="button" value="Delete task" data-doc="<%= task._id %>">
+            <input type="button" value="Update task" data-doc="<%= task._id %>" onclick="window.location.href='/update-task/<%= task._id %>'">
+        </div>
+    </div>
+
+    <script>
+        const deleteButton = document.querySelector("input[type=button]");
+        deleteButton.addEventListener("click",(e)=>{
+            const endpoint = `/delete-task/${deleteButton.dataset.doc}`;
+            fetch(endpoint,{
+                method:"DELETE"
+            })
+            .then((response) => response.json())
+            .then((data) => window.location.href = data.redirect)
+            .catch(err => console.log(err));
+        })
+    </script>
+</body>
+<%- include('./partials/footer.ejs') %>
+</html>

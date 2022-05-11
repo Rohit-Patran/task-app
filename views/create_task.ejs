@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./partials/header.ejs") %>
+<body>
+    <%- include("./partials/nav.ejs") %>
+        <form action="/task-create" method="POST">
+            <h2>CREATE NEW TASK</h2>
+            <textarea name="description" cols="30" rows="10" placeholder="enter task description"></textarea>
+            <section>
+                <label for="completed">Completed</label>
+                <select name="completed" required>
+                    <option selected disabled>select</option>
+                    <option value="true">true</option>
+                    <option value="false">false</option>
+                </select>
+            </section>
+            <input type="submit" value="create">
+        </form>
+</body>
+<%- include("./partials/footer.ejs") %>
+</html>

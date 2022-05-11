@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./partials/header.ejs") %>
+<body>
+    <%- include("./partials/nav.ejs") %>
+    <div class="tasks">
+        <h2>TASK APP</h2>
+        <% if(tasks.length > 0) {%>
+            <% tasks.forEach(task => { %>
+                <a href="/task-details/<%= task._id %>">
+                    <%= task.description %>
+                </a>
+            <% }) %>
+        <% } else { %>
+            <h2> No tasks to display </h2>
+        <% } %>
+    </div>
+</body>
+<%- include("./partials/footer.ejs") %>
+</html>
