@@ -1,2 +1,2 @@
 # task-app
-CRUD APP using node JS, express
+TASK APP (showing CRUD functionality) using node JS, express
