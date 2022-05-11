@@ -5,7 +5,7 @@ const app = express();
 
 const port = process.env.PORT || 3000
 
-//mongoose connection
+//mongoose connection for MongoDB database
 const dbURL = "mongodb://localhost:27017/TASKS";
 mongoose.connect(dbURL)
     .then(result => {
